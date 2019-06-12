@@ -50,9 +50,9 @@ int main(void)
 	uint32_t user_stacks[TASK_NUM][PSTACK_SIZE_WORDS];
 
 	//init user tasks
-	init_task(0, (uint32_t)task0, (user_stacks[0]+1024));
-	init_task(1, (uint32_t)task1, (user_stacks[1]+1024));
-	init_task(2, (uint32_t)task2, (user_stacks[2]+1024));
+	init_task(0, (uint32_t *)task0, (user_stacks[0]+1024));
+	init_task(1, (uint32_t *)task1, (user_stacks[1]+1024));
+	init_task(2, (uint32_t *)task2, (user_stacks[2]+1024));
 
 	printf("[Kernel] Start in privileged thread mode.\r\n\n");
 
